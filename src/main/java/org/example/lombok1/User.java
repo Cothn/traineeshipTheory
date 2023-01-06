@@ -15,6 +15,7 @@ public class User {
     @NonNull
     @Setter(AccessLevel.NONE)
     @EqualsAndHashCode.Include
+    @With
     private Integer id;
 
     @ToString.Include(rank = 1)
@@ -52,4 +53,11 @@ public class User {
 @EqualsAndHashCode(callSuper = true)
 class UserExt extends User{
     private String role;
+}
+
+@Builder(builderClassName = "HelloWorldBuilder", buildMethodName = "execute", builderMethodName = "helloWorld", toBuilder = true)
+class UserCln extends User{
+
+    private String roleCln;
+
 }
